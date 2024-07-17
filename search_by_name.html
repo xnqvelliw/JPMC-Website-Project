@@ -1,1 +1,202 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fish</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2c94de;
+        color: #333;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin: 0;
+        background-color: #333;
+        color: #2997f0;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Main content styles */
+    main {
+        padding: 20px;
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+    }
+    
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }</style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>GO FISH</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search_by_name.html">Our Fish</a></li>
+                <li><a href="suggest.html">Suggest</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="FishDropdown">
+    <!--<button onclick="toggleDropdown()">Dropdown</button>-->
+
+    <form onsubmit="return submitAction()" style="display:inline;">
+        <select id="mySelect" style="width:300px;" >
+          <option value="">Select Fish</option>
+          <option value="Fish1">Tuna</option>
+          <option value="Fish2">Trout</option>
+          <option value="Fish3">Goldfish</option>
+          
+          
+        </select>
+        
+        <button type="submit">Search</button>
+        <br><br>
+      </form>
+
+
+
+
+        </div>
+
+        <div id="InfoBlockFish1" style="display:none;">
+            <p id="Fish1P" style="display:inline;word-wrap:normal;">
+                A tuna is a saltwater fish that belongs to the tribe Thunnini, 
+                a subgrouping of the Scombridae (mackerel) family. The Thunnini comprise 
+                15 species across five genera, the sizes of which vary greatly, 
+                ranging from the bullet tuna (max length: 50 cm or 1.6 ft, weight: 1.8 kg 
+                or 4 lb) up to the Atlantic bluefin tuna (max length: 4.6 m or 15 ft, 
+                weight: 684 kg or 1,508 lb), which averages 2 m (6.6 ft) and is believed 
+                to live up to 50 years.
+            </p>
+            <br><br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Tuna_assortment.png" style="width:200px;height:200px;">
+        </div>
+
+        <div id="InfoBlockFish2" style="display:none;">
+            <p id="Fish1P" style="display:inline;word-wrap:normal;">
+                Trout (pl.: trout) is a generic common name for numerous species of carnivorous freshwater ray-finned fishes belonging to the genera Oncorhynchus, Salmo and Salvelinus, all of which are members of the subfamily Salmoninae in the family Salmonidae. The word trout is also used for some similar-shaped but non-salmonid fish, such as the spotted seatrout/speckled trout (Cynoscion nebulosus, which is actually a croaker).
+            </p>
+            <br><br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Salmo_trutta.jpg/800px-Salmo_trutta.jpg" style="width:200px;height:200px;">
+        </div>
+
+        <div id="InfoBlockFish3" style="display:none;">
+            <p id="Fish1P" style="display:inline;word-wrap:normal;">
+                The goldfish (Carassius auratus) is a freshwater fish in the family Cyprinidae of order Cypriniformes. It is commonly kept as a pet in indoor aquariums, and is one of the most popular aquarium fish. Goldfish released into the wild have become an invasive pest in parts of North America and Australia.
+            </p>
+            <br><br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Common_goldfish.JPG" style="width:300px;height:200px;">
+        </div>
+
+        <div id="InfoBlockFish4" style="display:none;">
+            <p id="Fish4P">Fish 4</p>
+            <img>
+        </div>
+
+        <div id="InfoBlockFish5" style="display:none;">
+            <p id="Fish5P">Fish 5</p>
+            <img>
+        </div>
+
+        <script>
+  
+
+  function submitAction() {
+    document.getElementById("InfoBlockFish1").style.cssText="display:none;";
+    document.getElementById("InfoBlockFish2").style.cssText="display:none;";
+    document.getElementById("InfoBlockFish3").style.cssText="display:none;";
+    document.getElementById("InfoBlockFish4").style.cssText="display:none;";
+    document.getElementById("InfoBlockFish5").style.cssText="display:none;";
+    
+    var selectedValue = document.getElementById("mySelect").value;
+    //document.getElementById("Fish1P").value="selectedValue";
+    if (selectedValue == "Fish1"){
+        document.getElementById("InfoBlockFish1").style.cssText="display:block;";
+    }
+    else if (selectedValue == "Fish2"){
+        document.getElementById("InfoBlockFish2").style.cssText="display:block;";
+    }
+    else if (selectedValue == "Fish3"){
+        document.getElementById("InfoBlockFish3").style.cssText="display:block;";
+    }
+    else if (selectedValue == "Fish4"){
+        document.getElementById("InfoBlockFish4").style.cssText="display:block;";
+    }
+    else if (selectedValue == "Fish5"){
+        document.getElementById("InfoBlockFish5").style.cssText="display:block;";
+    }
+    
+    //return false; // Prevent form submission
+  }
+
+
+  function DisplayFish1(){
+    alert("Fish 1 pressed");
+  }
+
+        </script>
+</main>
+
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+
+</body>
+
+
+</html>
