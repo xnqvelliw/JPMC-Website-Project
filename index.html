@@ -1,44 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Website Template</title>
-    <style>
-        /* Add some basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
+    <title>Simple Website Template</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2c94de;
+        color: #333;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin: 0;
+        background-color: #333;
+        color: #2997f0;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    .fish{display:inline;}
+    
+    /* Main content styles */
+    main {
+        padding: 20px;
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+    }
+    
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        bottom: 0;
+    }</style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <button id="myButton">Click Me!</button>
-    <p id="message"></p>
-
-    <script>
-        // JavaScript code to add interaction
-        document.getElementById('myButton').addEventListener('click', function() {
-            document.getElementById('message').innerText = "Hello, World!";
-        });
-    </script>
+    <header>
+        <h1>GO FISH</h1>
+        <img src="https://th.bing.com/th/id/R.f50639beaeb1a4d6cbfd4ca08168a10e?rik=K%2f5gOIKr%2bJDnTA&riu=http%3a%2f%2fwww.funnyjunksite.com%2fpictures%2fwp-content%2fuploads%2f2015%2f04%2fFunny-Man-Fish-Image.jpg&ehk=6I2cIU7Lq3sxAZ7WHHPPT9V0FivbdWSX1cTc0wLyf6k%3d&risl=&pid=ImgRaw&r=0"" alt="Header Image" class="header-img" width="200px" height="100px">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search_by_name.html">Our fish</a></li>
+                <li><a href="suggest.html">Suggest</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to GO FISH</h2>
+            <p>For all your fish needs.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="https://www.westend61.de/images/0000831792pw/smiling-crowd-of-business-people-cheering-with-arms-raised-CAIF01219.jpg" alt="Header Image" class="header-img" width="200px" height="100px">
+            <p>Linda, Lennon and maxsim have worked hard together to create spaces for fish enthuisastics to come together and learn more about fishes and teach others.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We provide fishing equiptment, tide ratings, speacial fishing ponds and much more!<br> click links for info!.</p>
+                <a href="https://www.academy.com/expert-advice/fishing-equipment-and-gear-for-beginners?msockid=02d517ccb5f76dd520f00372b4946cf3">best equipment</a>
+               <br> <a href="https://www.bing.com/aclick?ld=e84h9m9vsPlnw_tGmlhKiYezVUCUw487N0XhyFg_uLgO2UlfoC6s8G0a9LmuqYNOvbEi2L8YV84pi6b_hiKyqi6QGsTvBpTsNqTT0wBMZebrBOpdgWurGCVVw8ClVb4huKfpomRjkQcYAyDAeXwutEnIgQ6zBJkYmsJd6cby3HA21hc7tE&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA3ODc1Njk4NjkwMCUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODYyMTg2NjYxMSUyNmRzX2FfY2lkJTNkNDAwOTYzMzQ2JTI2ZHNfYV9jYWlkJTNkMjA4MjM1MzIwNTclMjZkc19hX2FnaWQlM2QxNTU0Mzk5MzA4NzklMjZkc19hX2xpZCUzZGt3ZC0xNzI2NDk1NTkxNjA3JTI2JTI2ZHNfZV9hZGlkJTNkNzk5ODk2NjI0NTYzODYlMjZkc19lX3RhcmdldF9pZCUzZGt3ZC03OTk4OTg0MjEzOTQyMyUzYWxvYy0xODglMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy52aXNpdHdhbGVzLmNvbSUyZnRoaW5ncy1kbyUyZmFkdmVudHVyZS1hbmQtYWN0aXZpdGllcyUyZndhdGVyc3BvcnRzJTNmZ2NsaWQlM2QxNzZiMWY1M2UxZTUxOGY5YmJlMzc5YzQ3ZmI1ZjAyYiUyNmdjbHNyYyUzZDNwLmRzJTI2JTI2bXNjbGtpZCUzZDE3NmIxZjUzZTFlNTE4ZjliYmUzNzljNDdmYjVmMDJiJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkR2VuZXJpY3MlMjUyMC0lMjUyMFRoaW5ncyUyNTIwVG8lMjUyMERvJTI1MjAtJTI1MjBXYXRlciUyNTIwU3BvcnRzJTI1MjBFbnRodXNpYXN0cyUyNTIwLSUyNTIwQXVkaWVuY2UlMjUyMC0lMjUyMEJyb2FkJTI2dXRtX3Rlcm0lM2RzcHJpbmd0aW1lJTI1MjBmaXNoaW5nJTI1MjB0cmlwJTI2dXRtX2NvbnRlbnQlM2RTcHJpbmclMjUyMEFjdGl2aXRpZXM&rlid=176b1f53e1e518f9bbe379c47fb5f02b">best spot for fishing</a>
+                <br> <a href="https://fishinglooker.com/what-is-fishing/">All about fishing</a>
+                <img src = "https://th.bing.com/th/id/R.54499e3d645ae875d7df3831a4cbb090?rik=SnRr5xHoWFMwwg&pid=ImgRaw&r=0" width:"70px" ;height:"60px">
+            <p></p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information. <br> email us at gofishforever@fish.com<br> call us at 07700999888</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
